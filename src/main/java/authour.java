@@ -15,6 +15,14 @@ public class authour {
         this.age = age;
     }
 
+    public authour(String firstName, String lastName, int age) {
+        FirstName = firstName;
+        LastName = lastName;
+        this.age = age;
+    }
+
+
+
     public int getAuthourid() {
         return Authourid;
     }
