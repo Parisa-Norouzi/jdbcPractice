@@ -1,21 +1,21 @@
-public class authour {
+public class Authour {
     private int Authourid ;
    private String FirstName ;
     private String  LastName;
    private int age ;
 
-    public authour() {
+    public Authour() {
 
     }
 
-    public authour(int authourid, String firstName, String lastName, int age) {
+    public Authour(int authourid, String firstName, String lastName, int age) {
         Authourid = authourid;
         FirstName = firstName;
         LastName = lastName;
         this.age = age;
     }
 
-    public authour(String firstName, String lastName, int age) {
+    public Authour(String firstName, String lastName, int age) {
         FirstName = firstName;
         LastName = lastName;
         this.age = age;

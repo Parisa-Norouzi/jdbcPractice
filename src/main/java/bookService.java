@@ -10,7 +10,7 @@ public class bookService {
         System.out.println("plese inter yearpublish:");
         String yearpublish=scanner.nextLine();
 
-        authour book1 =new authour(BookName,yearpublish,10);
+        Authour book1 =new Authour(BookName,yearpublish,10);
         System.out.println(book1);
 
     }

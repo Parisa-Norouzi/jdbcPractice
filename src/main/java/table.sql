@@ -7,6 +7,6 @@ CREATE TABLE authours (
 CREATE TABLE book (
                           Book_id serial primary key ,
                           Book_Name varchar(255),
-                          AuthourRef varchar(255),
-                          year_publish int
+                          AuthourRef int,
+                          year_publish varchar(50)
 );

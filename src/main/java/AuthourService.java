@@ -12,7 +12,7 @@ public class AuthourService {
 
         System.out.println("plese inter age:");
         String age=scanner.nextLine();
-        authour au =new authour(FirstName,LastName,10);
+        Authour au =new Authour(FirstName,LastName,10);
         System.out.println(au);
 
     }
