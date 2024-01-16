@@ -5,7 +5,7 @@ import java.sql.SQLException;
 public class JdbcConnection {
 
     private final Connection connection =
-            DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "1234");
+            DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "postgres");
 
     public JdbcConnection() throws SQLException {
     }
