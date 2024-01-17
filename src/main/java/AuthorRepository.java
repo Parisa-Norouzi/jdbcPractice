@@ -13,7 +13,7 @@ public class AuthorRepository {
 
     public void  registerAuthor(Authour users) throws SQLException {
             Connection connection=jdbcConnection.getConnection();
-            String addUser = "INSERT INTO users(first_name, last_name,authour_Age) VALUES (?, ?, ?);";
+            String addUser = "INSERT INTO users(First_Name, Last_Name,age) VALUES (?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(addUser);
 
             preparedStatement.setString(1,users.getFirstName());

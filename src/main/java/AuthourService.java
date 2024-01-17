@@ -15,9 +15,9 @@ public class AuthourService {
         System.out.println("Please enter your LastName: ");
         String lastname=scanner.nextLine();
         System.out.println("Please enter your age: ");
-        String authourAge =scanner.nextLine();
+        String age =scanner.nextLine();
 
-        Authour users=new Authour(firstname,lastname,authourAge);
+        Authour users=new Authour(firstname,lastname,age);
         authorRepository.registerAuthor(users);
     }
 }
