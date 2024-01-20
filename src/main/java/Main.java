@@ -6,7 +6,8 @@ public class Main {
 
     public static void main(String[] args) throws SQLException {
         Menu menu = new Menu();
-        menu.publicMenu();
+       //menu.publicMenu();
+       menu.saveBooks();
     }
 }
 

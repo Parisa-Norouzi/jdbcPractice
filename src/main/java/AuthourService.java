@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class AuthourService {
     private final Scanner scanner=new Scanner(System.in);
-    private final  AuthorRepository authorRepository=new AuthorRepository();
+    private final AuthorRepository authorRepository=new AuthorRepository();
 
     public AuthourService() throws SQLException {
     }

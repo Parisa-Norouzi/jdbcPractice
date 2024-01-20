@@ -8,18 +8,16 @@ public class BookRepository {
 
     public BookRepository() throws SQLException {
     }
-    public int registerBook(Book book) throws SQLException {
+    public void registerBook(Book book) throws SQLException {
         Connection connection = jdbcConnection.getConnection();
 
-        String addBook = "INSERT INTO book(Book_Name, AuthourRef, year_publish) VALUES (?, ?, ?);";
+        String addBook = "INSERT INTO book(book_Name, authourref,year_publish) VALUES (?, ?, ?);";
         PreparedStatement preparedStatement = connection.prepareStatement(addBook);
 
         preparedStatement.setString(1, book.getBookName());
-        preparedStatement.setString(2, String.valueOf(book.getAuthourRef()));
+        preparedStatement.setString(2, book.getAuthourRef());
         preparedStatement.setString(3, book.getYearpublish());
-
-
-        int result = preparedStatement.executeUpdate();
-        return result;
+         preparedStatement.executeUpdate();
     }
+    private Connection connection;
 }

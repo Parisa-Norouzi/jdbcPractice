@@ -1,24 +1,26 @@
 public class Book {
     private int Bookid ;
     private String BookName ;
-    private Authour authourRef ;
+    private String authourRef ;
     private String yearpublish ;
 
     public Book() {
     }
 
-    public Book(int bookid, String bookName, Authour authourRef, String yearpublish) {
+    public Book(int bookid, String bookName, String authourRef, String yearpublish) {
         Bookid = bookid;
         BookName = bookName;
         this.authourRef = authourRef;
         this.yearpublish = yearpublish;
     }
 
-    public Book(String bookName, Authour authourRef, String yearpublish) {
+    public Book(String bookName, String authourRef, String yearpublish) {
         BookName = bookName;
         this.authourRef = authourRef;
         this.yearpublish = yearpublish;
     }
+
+
 
     public int getBookid() {
         return Bookid;
@@ -44,11 +46,11 @@ public class Book {
         this.yearpublish = yearpublish;
     }
 
-    public Authour getAuthourRef() {
+    public String getAuthourRef() {
         return authourRef;
     }
 
-    public void setAuthourRef(Authour authourRef) {
+    public void setAuthourRef(String authourRef) {
         this.authourRef = authourRef;
     }
 
@@ -57,7 +59,7 @@ public class Book {
         return "Book{" +
                 "Bookid=" + Bookid +
                 ", BookName='" + BookName + '\'' +
-                ", authourRef=" + authourRef +
+                ", authourRef='" + authourRef + '\'' +
                 ", yearpublish='" + yearpublish + '\'' +
                 '}';
     }
