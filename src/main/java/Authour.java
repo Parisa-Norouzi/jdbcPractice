@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 public class Authour {
     private int Authourid ;
    private String FirstName ;
     private String  LastName;
    private String age ;
+    private Book [] Books ;
 
     public Authour(String firstName, String lastName, String age) {
         FirstName = firstName;
@@ -29,15 +32,13 @@ public class Authour {
         return FirstName;
     }
 
-    public String getLastName() {
-        return LastName;
-    }
-
     public void setFirstName(String firstName) {
         FirstName = firstName;
     }
 
-
+    public String getLastName() {
+        return LastName;
+    }
 
     public void setLastName(String lastName) {
         LastName = lastName;
@@ -51,8 +52,12 @@ public class Authour {
         this.age = age;
     }
 
-    public Authour(String age) {
-        this.age = age;
+    public Book[] getBooks() {
+        return Books;
+    }
+
+    public void setBooks(Book[] books) {
+        Books = books;
     }
 
     @Override
@@ -62,6 +67,7 @@ public class Authour {
                 ", FirstName='" + FirstName + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", age='" + age + '\'' +
+                ", Books=" + Arrays.toString(Books) +
                 '}';
     }
 }
