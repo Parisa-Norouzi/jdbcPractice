@@ -11,7 +11,7 @@ public class AuthorRepository {
         public AuthorRepository() throws SQLException {
         }
 
-    public void  registerAuthor(Authour authours) throws SQLException {
+    public int registerAuthor(Authour authours) throws SQLException {
             Connection connection=jdbcConnection.getConnection();
             String addUser = "INSERT INTO authours(first_Name , last_Name ,age) VALUES (?, ?, ?);";
             PreparedStatement preparedStatement = connection.prepareStatement(addUser);
@@ -19,8 +19,9 @@ public class AuthorRepository {
             preparedStatement.setString(1,authours.getFirstName());
             preparedStatement.setString(2,authours.getLastName());
             preparedStatement.setString(3,authours.getAge());
-            preparedStatement.executeUpdate();
-        }
+        int result=  preparedStatement.executeUpdate();
+        return  result;
+    }
         private Connection connection;
 
 

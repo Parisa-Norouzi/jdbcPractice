@@ -2,13 +2,21 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class AuthourService {
-    private final Scanner scanner=new Scanner(System.in);
-    private final AuthorRepository authorRepository=new AuthorRepository();
+    private static final Scanner scanner=new Scanner(System.in);
+    private static final AuthorRepository authorRepository;
+
+    static {
+        try {
+            authorRepository = new AuthorRepository();
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public AuthourService() throws SQLException {
     }
 
-    public void singUp() throws SQLException {
+    public static void singUp() throws SQLException {
 
         System.out.println("Please enter your FirstName: ");
         String firstname=scanner.nextLine();
@@ -18,6 +26,11 @@ public class AuthourService {
         String age =scanner.nextLine();
 
         Authour users=new Authour(firstname,lastname,age);
-        authorRepository.registerAuthor(users);
+       int result= authorRepository.registerAuthor(users);
+       if(result==1)
+           System.out.println(firstname +"successfully register");
+       else
+           System.out.println(" something is wrong :");
+
     }
 }

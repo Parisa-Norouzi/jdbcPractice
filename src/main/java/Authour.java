@@ -5,7 +5,6 @@ public class Authour {
    private String FirstName ;
     private String  LastName;
    private String age ;
-    private Book [] Books ;
 
     public Authour(String firstName, String lastName, String age) {
         FirstName = firstName;
@@ -52,14 +51,6 @@ public class Authour {
         this.age = age;
     }
 
-    public Book[] getBooks() {
-        return Books;
-    }
-
-    public void setBooks(Book[] books) {
-        Books = books;
-    }
-
     @Override
     public String toString() {
         return "Authour{" +
@@ -67,7 +58,6 @@ public class Authour {
                 ", FirstName='" + FirstName + '\'' +
                 ", LastName='" + LastName + '\'' +
                 ", age='" + age + '\'' +
-                ", Books=" + Arrays.toString(Books) +
                 '}';
     }
 }

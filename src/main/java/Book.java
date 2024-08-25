@@ -4,7 +4,7 @@ public class Book {
     private String authourRef ;
     private String yearpublish ;
 
-    public Book() {
+    public Book(int id) {
     }
 
     public Book(int bookid, String bookName, String authourRef, String yearpublish) {
